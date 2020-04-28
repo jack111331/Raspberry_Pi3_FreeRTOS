@@ -1,3 +1,4 @@
 /build/*
+/.idea
 freertos_bcm2837*
 kernel7.img

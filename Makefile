@@ -1,7 +1,6 @@
 PREFIX=C:/Program Files/GNU Tools ARM Embedded/4.7 2013q3/lib/gcc/arm-none-eabi/4.7.4
 ARMGNU ?= arm-none-eabi
-#INCLUDEPATH ?= "D:/Study/Raspberry/uCProject/working/work-ucos/h"
-INCLUDEPATH ?= FreeRTOS/Source/include 
+INCLUDEPATH ?= FreeRTOS/Source/include
 INCLUDEPATH2 ?= FreeRTOS/Source/portable/GCC/RaspberryPi
 INCLUDEPATH3 ?= Demo/Drivers
 
@@ -63,7 +62,6 @@ build/%.o : FreeRTOS/Source/portable/MemMang/%.c
 
 build/%.o : FreeRTOS/Source/%.c
 	$(ARMGNU)-gcc $(COPS) -c -o $@ $<
-	
 
 kernel.img : raspberrypi.ld $(OBJS)
 	$(ARMGNU)-ld $(OBJS) -T raspberrypi.ld -o freertos_bcm2837.elf 
