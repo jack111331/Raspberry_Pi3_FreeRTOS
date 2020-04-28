@@ -90,6 +90,10 @@ extern "C" {
 #define portSTACK_TYPE	unsigned portLONG
 #define portBASE_TYPE	portLONG
 
+typedef portSTACK_TYPE StackType_t;
+typedef portBASE_TYPE BaseType_t;
+typedef uint32_t UBaseType_t;
+
 #if( configUSE_16_BIT_TICKS == 1 )
 	typedef unsigned portSHORT portTickType;
 	#define portMAX_DELAY ( portTickType ) 0xffff
